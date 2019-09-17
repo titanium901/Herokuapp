@@ -16,9 +16,13 @@
 		CA47F1372330C92000327EF0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47F1362330C92000327EF0 /* User.swift */; };
 		CA47F13F2330D6B800327EF0 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47F13E2330D6B800327EF0 /* UserCell.swift */; };
 		CA47F1412330DB0700327EF0 /* MainTableVC+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47F1402330DB0700327EF0 /* MainTableVC+UITableViewDataSource.swift */; };
+		F1DB6AC8D16FFF88CCBCF0F9 /* Pods_frogogo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D17B56B351D20E36943804 /* Pods_frogogo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		173FA733B7058D32045C877F /* Pods-frogogo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frogogo.release.xcconfig"; path = "Target Support Files/Pods-frogogo/Pods-frogogo.release.xcconfig"; sourceTree = "<group>"; };
+		7829E1D434FD5AB42E1E37B8 /* Pods-frogogo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frogogo.debug.xcconfig"; path = "Target Support Files/Pods-frogogo/Pods-frogogo.debug.xcconfig"; sourceTree = "<group>"; };
+		B3D17B56B351D20E36943804 /* Pods_frogogo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frogogo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA47F11F2330C58900327EF0 /* frogogo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frogogo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA47F1222330C58900327EF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA47F1242330C58900327EF0 /* MainTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableVC.swift; sourceTree = "<group>"; };
@@ -37,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1DB6AC8D16FFF88CCBCF0F9 /* Pods_frogogo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FC7B5BDBB6530E3A31979DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7829E1D434FD5AB42E1E37B8 /* Pods-frogogo.debug.xcconfig */,
+				173FA733B7058D32045C877F /* Pods-frogogo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6C30159B476568D9F04C5506 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3D17B56B351D20E36943804 /* Pods_frogogo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CA47F1162330C58900327EF0 = {
 			isa = PBXGroup;
 			children = (
 				CA47F1212330C58900327EF0 /* frogogo */,
 				CA47F1202330C58900327EF0 /* Products */,
+				3FC7B5BDBB6530E3A31979DB /* Pods */,
+				6C30159B476568D9F04C5506 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA47F1312330C58900327EF0 /* Build configuration list for PBXNativeTarget "frogogo" */;
 			buildPhases = (
+				D01CF6FB026E68E4E68FB36F /* [CP] Check Pods Manifest.lock */,
 				CA47F11B2330C58900327EF0 /* Sources */,
 				CA47F11C2330C58900327EF0 /* Frameworks */,
 				CA47F11D2330C58900327EF0 /* Resources */,
+				C347D7D41406DC53F2668DFC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,6 +200,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C347D7D41406DC53F2668DFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-frogogo/Pods-frogogo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-frogogo/Pods-frogogo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-frogogo/Pods-frogogo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D01CF6FB026E68E4E68FB36F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-frogogo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CA47F11B2330C58900327EF0 /* Sources */ = {
@@ -328,6 +397,7 @@
 		};
 		CA47F1322330C58900327EF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7829E1D434FD5AB42E1E37B8 /* Pods-frogogo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -346,6 +416,7 @@
 		};
 		CA47F1332330C58900327EF0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 173FA733B7058D32045C877F /* Pods-frogogo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

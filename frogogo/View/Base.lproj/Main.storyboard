@@ -111,13 +111,19 @@
                                     <constraint firstAttribute="height" constant="135" id="0zL-Hc-c5h"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="iwQ-Zd-8Yo">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.29100793600082397" green="0.850239098072052" blue="0.74094140529632568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="STI-vc-c8n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3f0-dM-VD0"/>
                             <constraint firstAttribute="bottom" secondItem="STI-vc-c8n" secondAttribute="bottom" id="JgB-Ke-qPe"/>
                             <constraint firstItem="STI-vc-c8n" firstAttribute="top" secondItem="Nyc-BN-0Dm" secondAttribute="bottom" id="Khq-9P-wmN"/>
+                            <constraint firstItem="iwQ-Zd-8Yo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WxG-Pa-HSX"/>
                             <constraint firstItem="Nyc-BN-0Dm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bMg-8v-KMC"/>
+                            <constraint firstItem="iwQ-Zd-8Yo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jLf-vT-We4"/>
                             <constraint firstItem="Nyc-BN-0Dm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jrf-yQ-eRc"/>
                             <constraint firstItem="Nyc-BN-0Dm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nfj-oJ-U9O"/>
                             <constraint firstItem="STI-vc-c8n" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rB6-cE-MIY"/>
@@ -125,6 +131,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="iwQ-Zd-8Yo" id="FHo-xs-GL7"/>
                         <outlet property="tableView" destination="STI-vc-c8n" id="5ov-tw-OsU"/>
                     </connections>
                 </viewController>

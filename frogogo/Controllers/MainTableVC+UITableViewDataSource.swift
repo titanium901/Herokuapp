@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 extension MainTableVC: UITableViewDataSource {
     
@@ -25,9 +26,7 @@ extension MainTableVC: UITableViewDataSource {
         cell.nameLabel.text = "\(user.lastName) \(user.firstName)"
         cell.emailLabel.text = user.email
         guard let avatarStringUrl = user.avatarURL else { return }
-        if avatarStringUrl != "" {
-            
-        }
+        cell.avatar.sd_setImage(with: URL(string: avatarStringUrl), placeholderImage: UIImage(named: "defAvatar.png"))
         
     }
     

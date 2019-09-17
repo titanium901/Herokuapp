@@ -1,0 +1,6 @@
+framework module Pods_frogogo {
+  umbrella header "Pods-frogogo-umbrella.h"
+
+  export *
+  module * { export * }
+}
