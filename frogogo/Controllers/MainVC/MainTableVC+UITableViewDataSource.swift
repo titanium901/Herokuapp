@@ -11,6 +11,8 @@ import SDWebImage
 
 extension MainTableVC: UITableViewDataSource {
     
+   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
@@ -30,5 +32,8 @@ extension MainTableVC: UITableViewDataSource {
         
     }
     
+    
+    
 }
+
 

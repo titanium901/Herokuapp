@@ -10,10 +10,10 @@ import UIKit
 
 class MainTableVC: UIViewController {
     
-    var users = [User]()
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    var users = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +35,14 @@ class MainTableVC: UIViewController {
 
         }
 
-        
     }
+    
+    @IBAction func addButtonAction(_ sender: UIButton) {
+        guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "detailVC") as? DetailVC else { return }
+        present(detailVC, animated: true, completion: nil)
+    }
+    
+    
 }
 
 

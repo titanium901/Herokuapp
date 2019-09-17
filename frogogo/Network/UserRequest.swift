@@ -40,6 +40,58 @@ struct UserReguest {
         }
         dataTask.resume()
     }
+    
+    func postRequest(user: PostUser) {
+        let jsonEncoder = JSONEncoder()
+        jsonEncoder.outputFormatting = .prettyPrinted
+        
+        do {
+            let jsonData = try jsonEncoder.encode(user)
+            if let jsonString = String(data: jsonData, encoding: .utf8) {
+                print(jsonString)
+            }
+        } catch {
+            print("Failed to encode the food: \(error.localizedDescription)")
+        }
+    }
+    
+    func postRequest2(user: PostUser) {
+        let jsonEncoder = JSONEncoder()
+        jsonEncoder.outputFormatting = .prettyPrinted
+        var postString = String()
+        do {
+            let jsonData = try jsonEncoder.encode(user)
+            if let jsonString = String(data: jsonData, encoding: .utf8) {
+                postString = jsonString
+            }
+        } catch {
+            print("Failed to encode the food: \(error.localizedDescription)")
+            return
+        }
+        print("post")
+        print(postString)
+        
+        var request = URLRequest(url: resourseURL)
+        request.httpMethod = "POST"
+        request.httpBody = postString.data(using: .utf8)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            if let response = response {
+                print(response)
+            }
+            guard let data = data else { return }
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                print(json)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }.resume()
+        
+        
+       
+    }
 }
 
 

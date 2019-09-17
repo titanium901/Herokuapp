@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA28A81523310522007B93D6 /* MainTableVC+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA28A81423310522007B93D6 /* MainTableVC+UITableViewDelegate.swift */; };
+		CA28A81923311865007B93D6 /* DetailVC+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA28A81823311865007B93D6 /* DetailVC+UITextFieldDelegate.swift */; };
+		CA28A81B23311D60007B93D6 /* DetailVC+UIImagePickerControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA28A81A23311D60007B93D6 /* DetailVC+UIImagePickerControllerDelegate.swift */; };
+		CA28A81D233124B3007B93D6 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA28A81C233124B3007B93D6 /* ExtensionString.swift */; };
+		CA28A82023312729007B93D6 /* PostUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA28A81F23312729007B93D6 /* PostUser.swift */; };
 		CA47F1232330C58900327EF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47F1222330C58900327EF0 /* AppDelegate.swift */; };
 		CA47F1252330C58900327EF0 /* MainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47F1242330C58900327EF0 /* MainTableVC.swift */; };
 		CA47F1282330C58900327EF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA47F1262330C58900327EF0 /* Main.storyboard */; };
@@ -16,6 +21,7 @@
 		CA47F1372330C92000327EF0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47F1362330C92000327EF0 /* User.swift */; };
 		CA47F13F2330D6B800327EF0 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47F13E2330D6B800327EF0 /* UserCell.swift */; };
 		CA47F1412330DB0700327EF0 /* MainTableVC+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47F1402330DB0700327EF0 /* MainTableVC+UITableViewDataSource.swift */; };
+		CA47F1432330FEFD00327EF0 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47F1422330FEFD00327EF0 /* DetailVC.swift */; };
 		F1DB6AC8D16FFF88CCBCF0F9 /* Pods_frogogo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D17B56B351D20E36943804 /* Pods_frogogo.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +29,11 @@
 		173FA733B7058D32045C877F /* Pods-frogogo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frogogo.release.xcconfig"; path = "Target Support Files/Pods-frogogo/Pods-frogogo.release.xcconfig"; sourceTree = "<group>"; };
 		7829E1D434FD5AB42E1E37B8 /* Pods-frogogo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frogogo.debug.xcconfig"; path = "Target Support Files/Pods-frogogo/Pods-frogogo.debug.xcconfig"; sourceTree = "<group>"; };
 		B3D17B56B351D20E36943804 /* Pods_frogogo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frogogo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA28A81423310522007B93D6 /* MainTableVC+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainTableVC+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		CA28A81823311865007B93D6 /* DetailVC+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailVC+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		CA28A81A23311D60007B93D6 /* DetailVC+UIImagePickerControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailVC+UIImagePickerControllerDelegate.swift"; sourceTree = "<group>"; };
+		CA28A81C233124B3007B93D6 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
+		CA28A81F23312729007B93D6 /* PostUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUser.swift; sourceTree = "<group>"; };
 		CA47F11F2330C58900327EF0 /* frogogo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frogogo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA47F1222330C58900327EF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA47F1242330C58900327EF0 /* MainTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableVC.swift; sourceTree = "<group>"; };
@@ -34,6 +45,7 @@
 		CA47F1362330C92000327EF0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CA47F13E2330D6B800327EF0 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		CA47F1402330DB0700327EF0 /* MainTableVC+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainTableVC+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		CA47F1422330FEFD00327EF0 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +66,6 @@
 				7829E1D434FD5AB42E1E37B8 /* Pods-frogogo.debug.xcconfig */,
 				173FA733B7058D32045C877F /* Pods-frogogo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -64,6 +75,34 @@
 				B3D17B56B351D20E36943804 /* Pods_frogogo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA28A8162331062E007B93D6 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				CA47F1242330C58900327EF0 /* MainTableVC.swift */,
+				CA47F1402330DB0700327EF0 /* MainTableVC+UITableViewDataSource.swift */,
+				CA28A81423310522007B93D6 /* MainTableVC+UITableViewDelegate.swift */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		CA28A81723310642007B93D6 /* DetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				CA47F1422330FEFD00327EF0 /* DetailVC.swift */,
+				CA28A81823311865007B93D6 /* DetailVC+UITextFieldDelegate.swift */,
+				CA28A81A23311D60007B93D6 /* DetailVC+UIImagePickerControllerDelegate.swift */,
+			);
+			path = DetailVC;
+			sourceTree = "<group>";
+		};
+		CA28A81E233124B7007B93D6 /* Help Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CA28A81C233124B3007B93D6 /* ExtensionString.swift */,
+			);
+			path = "Help Extension";
 			sourceTree = "<group>";
 		};
 		CA47F1162330C58900327EF0 = {
@@ -92,6 +131,7 @@
 				CA47F13A2330C9A000327EF0 /* View */,
 				CA47F13B2330C9B100327EF0 /* Controllers */,
 				CA47F1392330C99600327EF0 /* Network */,
+				CA28A81E233124B7007B93D6 /* Help Extension */,
 				CA47F1292330C58900327EF0 /* Assets.xcassets */,
 				CA47F12B2330C58900327EF0 /* LaunchScreen.storyboard */,
 				CA47F12E2330C58900327EF0 /* Info.plist */,
@@ -103,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				CA47F1362330C92000327EF0 /* User.swift */,
+				CA28A81F23312729007B93D6 /* PostUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,8 +168,8 @@
 		CA47F13B2330C9B100327EF0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CA47F1242330C58900327EF0 /* MainTableVC.swift */,
-				CA47F1402330DB0700327EF0 /* MainTableVC+UITableViewDataSource.swift */,
+				CA28A8162331062E007B93D6 /* MainVC */,
+				CA28A81723310642007B93D6 /* DetailVC */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -252,8 +293,14 @@
 				CA47F1252330C58900327EF0 /* MainTableVC.swift in Sources */,
 				CA47F1352330C8C200327EF0 /* UserRequest.swift in Sources */,
 				CA47F13F2330D6B800327EF0 /* UserCell.swift in Sources */,
+				CA28A81B23311D60007B93D6 /* DetailVC+UIImagePickerControllerDelegate.swift in Sources */,
 				CA47F1232330C58900327EF0 /* AppDelegate.swift in Sources */,
+				CA28A82023312729007B93D6 /* PostUser.swift in Sources */,
+				CA28A81923311865007B93D6 /* DetailVC+UITextFieldDelegate.swift in Sources */,
+				CA28A81D233124B3007B93D6 /* ExtensionString.swift in Sources */,
+				CA28A81523310522007B93D6 /* MainTableVC+UITableViewDelegate.swift in Sources */,
 				CA47F1412330DB0700327EF0 /* MainTableVC+UITableViewDataSource.swift in Sources */,
+				CA47F1432330FEFD00327EF0 /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

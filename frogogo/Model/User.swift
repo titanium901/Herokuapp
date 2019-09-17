@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct User: Decodable {
-    let id: Int
+struct User: Codable {
+    var id: Int?
     let firstName, lastName, email: String
     let avatarURL: String?
-    let createdAt, updatedAt: String
-    let url: String
+    var createdAt, updatedAt: String?
+    var url: String?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -24,6 +24,15 @@ struct User: Decodable {
         case createdAt = "created_at"
         case updatedAt = "updated_at"
         case url
+    }
+}
+
+extension User {
+    init(firstName: String, lastName: String, email: String, avatarURL: String = "") {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.email = email
+        self.avatarURL = avatarURL
     }
 }
 
