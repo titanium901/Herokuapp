@@ -8,24 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		CA47F1232330C58900327EF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47F1222330C58900327EF0 /* AppDelegate.swift */; };
-		CA47F1252330C58900327EF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47F1242330C58900327EF0 /* ViewController.swift */; };
+		CA47F1252330C58900327EF0 /* MainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47F1242330C58900327EF0 /* MainTableVC.swift */; };
 		CA47F1282330C58900327EF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA47F1262330C58900327EF0 /* Main.storyboard */; };
 		CA47F12A2330C58900327EF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA47F1292330C58900327EF0 /* Assets.xcassets */; };
 		CA47F12D2330C58900327EF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA47F12B2330C58900327EF0 /* LaunchScreen.storyboard */; };
 		CA47F1352330C8C200327EF0 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47F1342330C8C200327EF0 /* UserRequest.swift */; };
 		CA47F1372330C92000327EF0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47F1362330C92000327EF0 /* User.swift */; };
+		CA47F13F2330D6B800327EF0 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47F13E2330D6B800327EF0 /* UserCell.swift */; };
+		CA47F1412330DB0700327EF0 /* MainTableVC+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47F1402330DB0700327EF0 /* MainTableVC+UITableViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CA47F11F2330C58900327EF0 /* frogogo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frogogo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA47F1222330C58900327EF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CA47F1242330C58900327EF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA47F1242330C58900327EF0 /* MainTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableVC.swift; sourceTree = "<group>"; };
 		CA47F1272330C58900327EF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA47F1292330C58900327EF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA47F12C2330C58900327EF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA47F12E2330C58900327EF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA47F1342330C8C200327EF0 /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
 		CA47F1362330C92000327EF0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CA47F13E2330D6B800327EF0 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		CA47F1402330DB0700327EF0 /* MainTableVC+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainTableVC+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				CA47F1222330C58900327EF0 /* AppDelegate.swift */,
+				CA47F1382330C98D00327EF0 /* Model */,
+				CA47F13A2330C9A000327EF0 /* View */,
 				CA47F13B2330C9B100327EF0 /* Controllers */,
 				CA47F1392330C99600327EF0 /* Network */,
-				CA47F13A2330C9A000327EF0 /* View */,
-				CA47F1382330C98D00327EF0 /* Model */,
 				CA47F1292330C58900327EF0 /* Assets.xcassets */,
 				CA47F12B2330C58900327EF0 /* LaunchScreen.storyboard */,
 				CA47F12E2330C58900327EF0 /* Info.plist */,
@@ -90,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				CA47F1262330C58900327EF0 /* Main.storyboard */,
+				CA47F13E2330D6B800327EF0 /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -97,7 +102,8 @@
 		CA47F13B2330C9B100327EF0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CA47F1242330C58900327EF0 /* ViewController.swift */,
+				CA47F1242330C58900327EF0 /* MainTableVC.swift */,
+				CA47F1402330DB0700327EF0 /* MainTableVC+UITableViewDataSource.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -174,9 +180,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA47F1372330C92000327EF0 /* User.swift in Sources */,
-				CA47F1252330C58900327EF0 /* ViewController.swift in Sources */,
+				CA47F1252330C58900327EF0 /* MainTableVC.swift in Sources */,
 				CA47F1352330C8C200327EF0 /* UserRequest.swift in Sources */,
+				CA47F13F2330D6B800327EF0 /* UserCell.swift in Sources */,
 				CA47F1232330C58900327EF0 /* AppDelegate.swift in Sources */,
+				CA47F1412330DB0700327EF0 /* MainTableVC+UITableViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

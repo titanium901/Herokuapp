@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainTableVC.swift
 //  frogogo
 //
 //  Created by Yury Popov on 17/09/2019.
@@ -8,9 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainTableVC: UIViewController {
     
     var users = [User]()
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,14 +25,16 @@ class ViewController: UIViewController {
                 print(error)
             case .success(let users):
                 self?.users = users
-                print(users)
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+                
             }
 
         }
 
         
     }
-
-
 }
+
 
