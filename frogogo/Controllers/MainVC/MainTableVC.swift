@@ -14,10 +14,11 @@ class MainTableVC: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var users = [User]()
+    var observer: NSObjectProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(#function)
         
         let userReguest = UserReguest()
         userReguest.getUsers { [weak self] result in
@@ -35,6 +36,33 @@ class MainTableVC: UIViewController {
 
         }
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    
+        observer = NotificationCenter.default.addObserver(forName: .updateUser, object: nil, queue: .main, using: { (notification) in
+            let detailVC = notification.object as! DetailVC
+            if detailVC.isPatch {
+                self.users[detailVC.indexPath.row] = detailVC.patchUser
+                self.tableView.reloadRows(at: [detailVC.indexPath], with: .none)
+            }
+          
+        })
+        
+        observer = NotificationCenter.default.addObserver(forName: .addUser, object: nil, queue: .main, using: { (notification) in
+            let detailVC = notification.object as! DetailVC
+            if detailVC.isPost {
+                let indexPathFirstRow = IndexPath(row: 0, section: 0)
+                let user = detailVC.postUser
+                self.users.insert(user!, at: 0)
+                self.tableView.insertRows(at: [indexPathFirstRow], with: .fade)
+            }
+            
+        })
+        
+        
+        
     }
     
     @IBAction func addButtonAction(_ sender: UIButton) {

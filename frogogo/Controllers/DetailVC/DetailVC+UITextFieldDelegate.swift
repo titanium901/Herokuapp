@@ -20,6 +20,8 @@ extension DetailVC: UITextFieldDelegate {
     }
     
     @IBAction func textFieldChanged() {
+        
+        
         if !firstNameTextField.text!.isEmpty, !lastNameTextField.text!.isEmpty, !emailTextField.text!.isEmpty, emailTextField.text!.isEmail {
             createButton.isEnabled = true
             createButton.setTitleColor(.white, for: .normal)

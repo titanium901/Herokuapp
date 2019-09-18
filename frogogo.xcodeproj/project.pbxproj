@@ -11,7 +11,7 @@
 		CA28A81923311865007B93D6 /* DetailVC+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA28A81823311865007B93D6 /* DetailVC+UITextFieldDelegate.swift */; };
 		CA28A81B23311D60007B93D6 /* DetailVC+UIImagePickerControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA28A81A23311D60007B93D6 /* DetailVC+UIImagePickerControllerDelegate.swift */; };
 		CA28A81D233124B3007B93D6 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA28A81C233124B3007B93D6 /* ExtensionString.swift */; };
-		CA28A82023312729007B93D6 /* PostUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA28A81F23312729007B93D6 /* PostUser.swift */; };
+		CA28A8222332342D007B93D6 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA28A8212332342D007B93D6 /* NotificationNameExtension.swift */; };
 		CA47F1232330C58900327EF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47F1222330C58900327EF0 /* AppDelegate.swift */; };
 		CA47F1252330C58900327EF0 /* MainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47F1242330C58900327EF0 /* MainTableVC.swift */; };
 		CA47F1282330C58900327EF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA47F1262330C58900327EF0 /* Main.storyboard */; };
@@ -33,7 +33,7 @@
 		CA28A81823311865007B93D6 /* DetailVC+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailVC+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		CA28A81A23311D60007B93D6 /* DetailVC+UIImagePickerControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailVC+UIImagePickerControllerDelegate.swift"; sourceTree = "<group>"; };
 		CA28A81C233124B3007B93D6 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
-		CA28A81F23312729007B93D6 /* PostUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUser.swift; sourceTree = "<group>"; };
+		CA28A8212332342D007B93D6 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 		CA47F11F2330C58900327EF0 /* frogogo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frogogo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA47F1222330C58900327EF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA47F1242330C58900327EF0 /* MainTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableVC.swift; sourceTree = "<group>"; };
@@ -101,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				CA28A81C233124B3007B93D6 /* ExtensionString.swift */,
+				CA28A8212332342D007B93D6 /* NotificationNameExtension.swift */,
 			);
 			path = "Help Extension";
 			sourceTree = "<group>";
@@ -143,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				CA47F1362330C92000327EF0 /* User.swift */,
-				CA28A81F23312729007B93D6 /* PostUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,10 +292,10 @@
 				CA47F1372330C92000327EF0 /* User.swift in Sources */,
 				CA47F1252330C58900327EF0 /* MainTableVC.swift in Sources */,
 				CA47F1352330C8C200327EF0 /* UserRequest.swift in Sources */,
+				CA28A8222332342D007B93D6 /* NotificationNameExtension.swift in Sources */,
 				CA47F13F2330D6B800327EF0 /* UserCell.swift in Sources */,
 				CA28A81B23311D60007B93D6 /* DetailVC+UIImagePickerControllerDelegate.swift in Sources */,
 				CA47F1232330C58900327EF0 /* AppDelegate.swift in Sources */,
-				CA28A82023312729007B93D6 /* PostUser.swift in Sources */,
 				CA28A81923311865007B93D6 /* DetailVC+UITextFieldDelegate.swift in Sources */,
 				CA28A81D233124B3007B93D6 /* ExtensionString.swift in Sources */,
 				CA28A81523310522007B93D6 /* MainTableVC+UITableViewDelegate.swift in Sources */,

@@ -20,11 +20,18 @@ class DetailVC: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var user: User!
+    var patchUser: User!
+    var postUser: User!
     var isCamer = UIImagePickerController.isSourceTypeAvailable(.camera)
     var buttonLabel: String!
+    var isPatch = false
+    var isPost = false
+    var indexPath: IndexPath!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         createButton.setTitle(buttonLabel, for: .normal)
+        
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self
         emailTextField.delegate = self
@@ -67,22 +74,30 @@ class DetailVC: UIViewController {
         switch sender.titleLabel?.text {
         case "POST":
             //Post User
-            let postUser = User(firstName: firstName, lastName: lastName, email: email)
+            postUser = User(firstName: firstName, lastName: lastName, email: email)
             let postUserRequest = UserReguest()
             postUserRequest.request(user: postUser, httpMethod: "POST")
+            isPost = true
+            NotificationCenter.default.post(name: NSNotification.Name.addUser, object: self)
             print("POST")
         case "PATCH":
             //Patch user
-            var patchUser = User(firstName: firstName, lastName: lastName, email: email)
+            patchUser = User(firstName: firstName, lastName: lastName, email: email)
             patchUser.id = user.id
             guard let userId = patchUser.id else { return }
-            print(patchUser)
+            if patchUser.firstName == user.firstName && patchUser.lastName == user.lastName && patchUser.email == user.email {
+                return
+            }
             let patchUserReguest = UserReguest(userId: userId)
             patchUserReguest.request(user: patchUser, httpMethod: "PATCH")
+            isPatch = true
+            NotificationCenter.default.post(name: NSNotification.Name.updateUser, object: self)
             print("Patch")
         default:
             break
         }
+        self.view.endEditing(true)
+        dismiss(animated: true, completion: nil)
         
         
     }
