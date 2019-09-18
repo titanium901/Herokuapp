@@ -60,9 +60,14 @@ class MainTableVC: UIViewController {
             }
             
         })
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         
-        
-        
+        if let observer = observer {
+            NotificationCenter.default.removeObserver(observer)
+        }
     }
     
     @IBAction func addButtonAction(_ sender: UIButton) {
