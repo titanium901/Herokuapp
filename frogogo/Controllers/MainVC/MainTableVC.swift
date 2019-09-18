@@ -39,24 +39,24 @@ class MainTableVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     
-        NotificationCenter.default.addObserver(forName: .updateUser, object: nil, queue: .main, using: { (notification) in
+        NotificationCenter.default.addObserver(forName: .updateUser, object: nil, queue: .main, using: { [weak self] (notification) in
             print("Update User")
             let detailVC = notification.object as! DetailVC
             if detailVC.isPatch {
-                self.users[detailVC.indexPath.row] = detailVC.patchUser
-                self.tableView.reloadRows(at: [detailVC.indexPath], with: .none)
+                self?.users[detailVC.indexPath.row] = detailVC.patchUser
+                self?.tableView.reloadRows(at: [detailVC.indexPath], with: .none)
             }
           
         })
         
-         NotificationCenter.default.addObserver(forName: Notification.Name("addUser"), object: nil, queue: .main, using: { (notification) in
+         NotificationCenter.default.addObserver(forName: Notification.Name("addUser"), object: nil, queue: .main, using: { [weak self] (notification) in
             let detailVC = notification.object as! DetailVC
             print("Add New User")
             if detailVC.isPost {
                 let user = detailVC.postUser
-                self.users.append(user!)
-                self.tableView.reloadData()
-                self.tableView.scrollToRow(at: IndexPath(row: self.users.count - 1, section: 0), at: .bottom, animated: false)
+                self?.users.append(user!)
+                self?.tableView.reloadData()
+                self?.tableView.scrollToRow(at: IndexPath(row: (self?.users.count)! - 1, section: 0), at: .bottom, animated: false)
             }
             
         })
