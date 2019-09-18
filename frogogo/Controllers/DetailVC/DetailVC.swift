@@ -41,6 +41,11 @@ class DetailVC: UIViewController {
         setUser(user)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     //MARK: - Custom methods
     
     func setUser(_ user: User?) {
@@ -63,6 +68,8 @@ class DetailVC: UIViewController {
 
     }
     
+ 
+    
     //MARK: - IBAction
    
     @IBAction func backButtonAction(_ sender: Any) {
@@ -84,7 +91,7 @@ class DetailVC: UIViewController {
             let postUserRequest = UserReguest()
             postUserRequest.request(user: postUser, httpMethod: "POST")
             isPost = true
-            NotificationCenter.default.post(name: NSNotification.Name.addUser, object: self)
+            NotificationCenter.default.post(name: .addUser, object: self)
             print("POST")
         case "PATCH":
             //Patch user
@@ -136,6 +143,7 @@ class DetailVC: UIViewController {
         present(ac, animated: true)
     }
     
+
     
 }
 
