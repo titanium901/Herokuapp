@@ -18,7 +18,6 @@ class MainTableVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#function)
         
         let userReguest = UserReguest()
         userReguest.getUsers { [weak self] result in
