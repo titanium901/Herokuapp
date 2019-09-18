@@ -39,6 +39,7 @@ class MainTableVC: UIViewController {
     
     @IBAction func addButtonAction(_ sender: UIButton) {
         guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "detailVC") as? DetailVC else { return }
+        detailVC.buttonLabel = "POST"
         present(detailVC, animated: true, completion: nil)
     }
     

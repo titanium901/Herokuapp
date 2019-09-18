@@ -21,8 +21,10 @@ class DetailVC: UIViewController {
     
     var user: User!
     var isCamer = UIImagePickerController.isSourceTypeAvailable(.camera)
+    var buttonLabel: String!
     override func viewDidLoad() {
         super.viewDidLoad()
+        createButton.setTitle(buttonLabel, for: .normal)
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self
         emailTextField.delegate = self
@@ -61,10 +63,28 @@ class DetailVC: UIViewController {
         let firstName = firstNameTextField.text!
         let lastName = lastNameTextField.text!
         let email = emailTextField.text!
-        let userReguest = UserReguest()
-        let postUser = PostUser(user: User(firstName: firstName, lastName: lastName, email: email))
-//        userReguest.postRequest(user: postUser)
-        userReguest.postRequest2(user: postUser)
+        
+        switch sender.titleLabel?.text {
+        case "POST":
+            //Post User
+            let postUser = User(firstName: firstName, lastName: lastName, email: email)
+            let postUserRequest = UserReguest()
+            postUserRequest.request(user: postUser, httpMethod: "POST")
+            print("POST")
+        case "PATCH":
+            //Patch user
+            var patchUser = User(firstName: firstName, lastName: lastName, email: email)
+            patchUser.id = user.id
+            guard let userId = patchUser.id else { return }
+            print(patchUser)
+            let patchUserReguest = UserReguest(userId: userId)
+            patchUserReguest.request(user: patchUser, httpMethod: "PATCH")
+            print("Patch")
+        default:
+            break
+        }
+        
+        
     }
     
     

@@ -15,6 +15,7 @@ extension MainTableVC: UITableViewDelegate {
         let user = users[indexPath.row]
         guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "detailVC") as? DetailVC else { return }
         detailVC.user = user
+        detailVC.buttonLabel = "PATCH"
         present(detailVC, animated: true, completion: nil)
     }
 }
