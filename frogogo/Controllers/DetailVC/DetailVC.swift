@@ -11,6 +11,7 @@ import SDWebImage
 
 class DetailVC: UIViewController {
     
+    //MARK: - IBOutlet
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -19,6 +20,7 @@ class DetailVC: UIViewController {
     @IBOutlet var auxImageView: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    //MARK: - Properties
     var user: User!
     var patchUser: User!
     var postUser: User!
@@ -28,16 +30,18 @@ class DetailVC: UIViewController {
     var isPost = false
     var indexPath: IndexPath!
     
+    //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         createButton.setTitle(buttonLabel, for: .normal)
-        
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self
         emailTextField.delegate = self
         
         setUser(user)
     }
+    
+    //MARK: - Custom methods
     
     func setUser(_ user: User?) {
         activityIndicator.stopAnimating()
@@ -58,7 +62,8 @@ class DetailVC: UIViewController {
         }
 
     }
- 
+    
+    //MARK: - IBAction
    
     @IBAction func backButtonAction(_ sender: Any) {
         self.view.endEditing(true)
@@ -66,6 +71,7 @@ class DetailVC: UIViewController {
     }
     
     @IBAction func postAction(_ sender: UIButton) {
+        print(#function)
         guard !firstNameTextField.text!.isEmpty, !lastNameTextField.text!.isEmpty, !emailTextField.text!.isEmpty else { return }
         let firstName = firstNameTextField.text!
         let lastName = lastNameTextField.text!
@@ -92,8 +98,9 @@ class DetailVC: UIViewController {
             patchUserReguest.request(user: patchUser, httpMethod: "PATCH")
             isPatch = true
             NotificationCenter.default.post(name: NSNotification.Name.updateUser, object: self)
-            print("Patch")
+            print("PATCH")
         default:
+            print("default")
             break
         }
         self.view.endEditing(true)

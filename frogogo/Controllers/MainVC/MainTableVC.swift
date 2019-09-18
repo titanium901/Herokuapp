@@ -52,10 +52,9 @@ class MainTableVC: UIViewController {
         observer = NotificationCenter.default.addObserver(forName: .addUser, object: nil, queue: .main, using: { (notification) in
             let detailVC = notification.object as! DetailVC
             if detailVC.isPost {
-                let indexPathFirstRow = IndexPath(row: 0, section: 0)
                 let user = detailVC.postUser
-                self.users.insert(user!, at: 0)
-                self.tableView.insertRows(at: [indexPathFirstRow], with: .fade)
+                self.users.append(user!)
+                self.tableView.reloadData()
             }
             
         })
@@ -64,9 +63,6 @@ class MainTableVC: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        if let observer = observer {
-            NotificationCenter.default.removeObserver(observer)
-        }
     }
     
     @IBAction func addButtonAction(_ sender: UIButton) {
@@ -74,8 +70,7 @@ class MainTableVC: UIViewController {
         detailVC.buttonLabel = "POST"
         present(detailVC, animated: true, completion: nil)
     }
-    
-    
+   
 }
 
 
